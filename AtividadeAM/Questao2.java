@@ -8,9 +8,9 @@ import java.io.InputStreamReader;
 public class Questao2 {
 
     public static void main(String args[]) throws IOException {
-        FileInputStream arq = new FileInputStream("C:\\Users\\rapha\\Desktop\\Atividade AM\\AtividadeAM\\input2.txt");
-        InputStreamReader leri = new InputStreamReader(arq);
-        BufferedReader buffer = new BufferedReader(leri);
+        FileInputStream  arq = new FileInputStream("C:\\Users\\rapha\\Desktop\\Atividade AM\\AtividadeAM\\input2.txt");
+        InputStreamReader  leri = new InputStreamReader(arq);
+        BufferedReader  buffer = new BufferedReader(leri);
         String l = buffer.readLine();
         String input1 = l;
         l = buffer.readLine();
@@ -34,6 +34,7 @@ public class Questao2 {
                 System.out.println("Faltam ligações");
             }
         }
+        
         while (fim == 1) {
             fim = 0;
             for (int j = 0; j < Vendedores.length; j++) {
@@ -42,6 +43,7 @@ public class Questao2 {
                     Desempenho[j] = Desempenho[j] + 1;
                 }
             }
+            
             for (int j = 0; j < Vendedores.length; j++) {
                 for (int k = 0; k < input.length; k++) {
                     if (Vendedores[j] == 0 && Integer.parseInt(input[k]) != 0) {
