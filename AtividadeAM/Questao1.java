@@ -15,22 +15,22 @@ public class Questao1 {
         String[] input = new String[3];
         int i = -1;
         while (l != null) {
-            i = i + 1;
-            input[i] = l;
-            l = buffer.readLine();
+            i=i+1;
+            input[i]=l;
+            l=buffer.readLine();
         }
         
         String[] fatp = input[2].split(" ");
-        int Tmedio = 0;
-        int Tfatia = 0;
-        for (int k = 0; k < fatp.length; k++) {
+        int Tmedio=0;
+        int Tfatia=0;
+        for (int k=0; k < fatp.length; k++) {
             Tmedio += Integer.parseInt(fatp[k]);
         }
         
         Tmedio = Tmedio / Integer.parseInt(input[0]);
 
         while (Tmedio > 0) {
-            for (int k = 0; k < fatp.length; k++) {
+            for (int k=0; k < fatp.length; k++) {
                 Tfatia += Integer.parseInt(fatp[k]) / Tmedio;
             }
             
@@ -39,8 +39,8 @@ public class Questao1 {
                 break;
                 
             } else {
-                Tmedio = Tmedio - 1;
-                Tfatia = 0;
+                Tmedio=Tmedio - 1;
+                Tfatia=0;
             }
         }
     }
